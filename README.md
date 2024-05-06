@@ -1,5 +1,7 @@
-user 1:
+user:
+
 username: megahd
+
 password: firstuser
 
 API endpoint: http://HOST_URL/arduino_data
