@@ -1,0 +1,39 @@
+{% extends "medical/layout.html" %}
+{% block body %}
+{% if main %}
+    <hr>
+    <div class="card border-success mb-3">
+        <div class="card-header bg-transparent border-success">Last 10 results</div>
+        <div class="card-body text-success">
+        <h5 class="card-title">Number #{{main.id}}</h5>
+        <p class="card-text">Results.</p>
+        <ul class="list-group">
+            <li class="list-group-item">Tempreture: <span class="list_span">{{main.temp}}</span></li>
+            <li class="list-group-item">Blood pressure: <span class="list_span">{{main.press}}</span></li>
+            <li class="list-group-item">Heart Rate: <span class="list_span">{{main.h_rate}}</span></li>
+            <li class="list-group-item">Blood oxygenation: <span class="list_span">{{main.b_oxy}}</span></li>
+            <li class="list-group-item">Sugar Level: <span class="list_span">{{main.Sugar}}</span></li>
+        </ul>
+        </div>
+        <div class="card-footer bg-transparent border-success">Created at {{main.created_at}}</div>
+    </div>
+    {% for result in results %}
+        <hr>
+        <div class="card border-success mb-3">
+            <div class="card-body text-success">
+            <h5 class="card-title">Number #{{result.id}}</h5>
+            <p class="card-text">Results.</p>
+            <ul class="list-group">
+                <li class="list-group-item">Tempreture: <span class="list_span">{{result.temp}}</span></li>
+                <li class="list-group-item">Blood pressure: <span class="list_span">{{result.press}}</span></li>
+                <li class="list-group-item">Heart Rate: <span class="list_span">{{result.h_rate}}</span></li>
+                <li class="list-group-item">Blood oxygenation: <span class="list_span">{{result.b_oxy}}</span></li>
+                <li class="list-group-item">Sugar Level: <span class="list_span">{{result.Sugar}}</span></li>
+            </ul>
+            </div>
+            <div class="card-footer bg-transparent border-success">Created at {{result.created_at}}</div>
+        </div>
+    {% endfor %}
+{% endif %}
+
+{% endblock %}
