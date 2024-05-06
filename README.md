@@ -2,7 +2,7 @@ user 1:
 username: megahd
 password: firstuser
 
-API endpoint: http://HOST URL/arduino_data
+API endpoint: http://HOST_URL/arduino_data
 <!-- e.g usage: http://127.0.0.1:8000/arduino_data/ -->
 1. copy:
 
